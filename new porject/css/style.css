@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&family=Macondo&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+/* Color variables */
+:root {
+  --gray-color: rgba(204, 204, 204, 0.637);
+  --light-blue: rgb(148, 198, 238);
+  --header-bar-color: rgb(9, 99, 126);
+  --about-bg-color: rgb(82, 135, 173);
+  --hero-section-color: rgb(8, 131, 149);
+  --skill-section-color: rgb(122, 178, 178);
+  --skill-bg-color: rgba(85, 247, 239, 0.466);
+  --btn-bg: rgb(90, 68, 82);
+
+
+  --footer-color: rgb(122, 178, 178);
+}
+
+/* Changing background color */
+
+
+
+body {
+  background-color: rgb(148, 198, 238);
+
+
+  line-height: 1.6;
+
+  font-family: "Macondo", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Hero section background image */
+
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 80px 20px;
+  /* justify-content;; */
+}
+
+.hero-text h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+.profile-wrapper {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.profile-wrapper::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--gray-color), transparent 80%);
+  animation: glow 3s infinite ease-in-out;
+}
+
+@keyframes glow {
+  from {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  to {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+.profile-image {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 25%;
+  z-index: 2;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+
+.typing-wrapper {
+  flex: 1;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+h1 {
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: start;
+  background: var(--hero-section-color);
+  padding: 70px 50px;
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(134, 118, 118, 0.47);
+
+}
+
+/*        About Section  */
+#about {
+  padding: 100px 0;
+
+}
+
+#about:hover {
+
+  background: var(--gray-color);
+  border-radius: 85px;
+}
+
+#about p {
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.about-box {
+
+  background: var(--about-bg-color);
+  padding: 50px;
+  border-radius: 30px;
+  max-width: 800px;
+  margin: auto;
+}
+
+
+/*        Skills Section */
+
+
+#skills {
+  padding: 50px 0;
+}
+
+.skills-box {
+  background: var(--skill-bg-color);
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #c8e77f, #55f7ef77);
+  border-radius: 30px;
+  max-width: 800px;
+  margin: auto;
+
+}
+
+#skills ul li {
+  list-style: none;
+  margin: 5px 5px;
+  display: flexbox;
+  padding: 10px 10px;
+}
+
+
+#skills .row {
+  padding-right: 15px;
+  line-height: 1.8;
+}
+
+#skills .row p {
+  margin-bottom: 5px;
+}
+
+#skills .bg-warning {
+  height: 20px;
+  border-radius: 10px;
+}
+
+/*        Projects       */
+
+#pro {
+  padding: 50px 0;
+  background: #2ce2bbf5;
+  border-radius: 30px;
+  padding: auto;
+  margin: 40px;
+}
+
+
+
+.card {
+  padding: 30px;
+  border: 1px solid var(--gray-color);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  background: var(--about-bg-color);
+  transform: translateY(-11px) scale(1.04);
+  box-shadow: var(--skill-section-color);
+}
+
+
+
+.card h5 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.links a {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.links a {
+  background: var(--btn-bg);
+  color: rgb(255, 255, 255);
+  border: 1px solid var(--skill-bg-color);
+
+
+}
+
+
+
+.links a:hover {
+  box-shadow: var(--gray-color);
+  transform: scale(1.1);
+}
+
+#contact .btn-outline-light {
+  background-color: var(--btn-bg);
+  border: 2px solid var(--light-blue);
+  font-weight: bold;
+  font: size 14px;
+  transition: all 0.1s ease-in-out;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#contact .btn-outline-light:hover {
+  box-shadow: #2ce2bbf5;
+  transform: scale(1.1);
+  color: white;
+}
