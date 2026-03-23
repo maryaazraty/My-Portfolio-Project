@@ -196,11 +196,11 @@ h1 {
 /*        Projects       */
 
 #pro {
-  padding: 50px 0;
+  padding: 50px ;
   background: #2ce2bbf5;
   border-radius: 30px;
   padding: auto;
-  margin: 40px;
+  margin: 60px;
 }
 
 
@@ -252,6 +252,8 @@ h1 {
   box-shadow: var(--gray-color);
   transform: scale(1.1);
 }
+
+/* Contact  */
 
 #contact .btn-outline-light {
   background-color: var(--btn-bg);
